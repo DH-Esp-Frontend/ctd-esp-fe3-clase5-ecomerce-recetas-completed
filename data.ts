@@ -50,3 +50,26 @@ export const data = [
       "id": "12"
     }
   ]
+
+export const offers = [
+  {
+    "name": "Fancy recipes",
+    "image": "https://images.pexels.com/photos/2228580/pexels-photo-2228580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "id": "13"
+  },
+  {
+    "name": "Cooking first, pictures after",
+    "image": "https://images.pexels.com/photos/2148215/pexels-photo-2148215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "id": "14"
+  },
+  {
+    "name": "Unusual food",
+    "image": "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "id": "15"
+  },
+  {
+    "name": "Master your kitchen",
+    "image": "https://images.pexels.com/photos/2820007/pexels-photo-2820007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "id": "16"
+  }
+]
