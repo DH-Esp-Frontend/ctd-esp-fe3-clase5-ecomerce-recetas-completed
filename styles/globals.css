@@ -9,8 +9,16 @@ body {
 a {
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
+
+a:hover{
+  color: rgba(80, 115, 190, 0.829);
+}
+
 
 * {
   box-sizing: border-box;
 }
+

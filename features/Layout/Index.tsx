@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 import NavBar from '../Navigation'
 
@@ -7,13 +8,15 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({children}) => {
+  const router = useRouter()
+  console.log(router.route);
   return (
     <>
-        <Head>  
-            <title>Cooking Shelf</title>
+        <Head> 
+            <title>Cooking Shelf</title> 
             <link rel="icon" href="/logo.png" />
         </Head>
-        <NavBar/>
+        {router.route !== "/" && <NavBar/>}
         {children}
     </>
   )

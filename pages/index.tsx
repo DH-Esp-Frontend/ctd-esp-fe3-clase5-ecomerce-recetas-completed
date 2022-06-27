@@ -5,10 +5,12 @@ import styles from '../styles/Home.module.css'
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <h1>Explore the world library recipes</h1>
-      <Link href="/products" >
-        <button>HOME</button>
-      </Link>
+      <div className={styles.content}>
+        <h1 className={styles.heading} >Explore the world library recipes</h1>
+        <Link href="/products" >
+          <button className={styles.button} >HOME</button>
+        </Link>
+      </div>
     </div>
   )
 }
