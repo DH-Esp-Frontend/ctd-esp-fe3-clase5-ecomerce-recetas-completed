@@ -1,12 +1,14 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <h1>Hello there</h1>
+      <h1>Explore the world library recipes</h1>
+      <Link href="/products" >
+        <button>HOME</button>
+      </Link>
     </div>
   )
 }
