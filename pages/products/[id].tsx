@@ -1,7 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 import Book from '../../features/Book'
+import BookInfo from '../../features/Book/bookInfo'
 
 type Book = {name: string, id: string, image: string}
 
@@ -18,15 +20,7 @@ const Product: FC<Props> = ({book}) => {
     }
 
   return (
-    <div className='info'>
-        <Book data={book}/>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Aspernatur praesentium labore veritatis culpa sed dicta at accusantium aut dolore.
-        Dignissimos voluptatem pariatur, natus inventore nisi sit
-        commodi voluptate animi corporis?</p>
-        <button onClick={handleBought}>Buy now</button>
-
-    </div>
+    <BookInfo book={book} handleBought={handleBought} />
   )
 }
 

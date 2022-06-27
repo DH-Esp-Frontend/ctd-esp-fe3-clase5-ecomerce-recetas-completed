@@ -9,14 +9,13 @@ interface Props {
 
 const Layout: FC<Props> = ({children}) => {
   const router = useRouter()
-  console.log(router.route);
   return (
     <>
         <Head> 
             <title>Cooking Shelf</title> 
             <link rel="icon" href="/logo.png" />
         </Head>
-        {router.route !== "/" && <NavBar/>}
+        <NavBar/>
         {children}
     </>
   )

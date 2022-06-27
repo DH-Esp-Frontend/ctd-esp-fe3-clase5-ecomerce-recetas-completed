@@ -1,0 +1,14 @@
+.heading{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.booksGrid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}

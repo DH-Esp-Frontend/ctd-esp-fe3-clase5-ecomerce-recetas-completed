@@ -9,12 +9,16 @@ interface Props {
 
 const Book: FC<Props> = ({data}) => {
   return (
-    <div className='card'>
-          <Link href={`/products/${data.id}`} >
-              <h3>{data.name}</h3>
-          </Link>
+      <div className="card border-light mb-3" style={{width: "22rem", margin: "0 2rem"}}>
+        <div className="card-body">
+          <h3 className="card-title">{data.name}</h3>
           <Image src={data.image} alt="book-cover" width={200} height={300} />
-    </div>
+          <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi reiciendis porro, quaerat commodi</p>
+          <Link href={`/products/${data.id}`} >
+             <button className="btn btn-outline-success">Buy now</button>
+          </Link>
+        </div>
+      </div>
   )
 }
 

@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <div className={styles.content}>
         <h1 className={styles.heading} >Explore the world library recipes</h1>
         <Link href="/products" >
-          <button className={styles.button} >HOME</button>
+          <button className={styles.button} >EXPLORE</button>
         </Link>
       </div>
     </div>

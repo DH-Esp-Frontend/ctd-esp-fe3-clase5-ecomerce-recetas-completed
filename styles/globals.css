@@ -6,17 +6,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
 
-a:hover{
-  color: rgba(80, 115, 190, 0.829);
-}
 
+h3:hover{
+  color:  rgb(34, 121, 121);
+}
 
 * {
   box-sizing: border-box;
