@@ -27,7 +27,7 @@ const Products: NextPage<Props> = ({books}) => {
 
 
 export const getServerSideProps: GetServerSideProps =async () => {
-    const res = await fetch("https://62b3a9264f851f87f45dfb80.mockapi.io/api/example/data")
+    const res = await fetch("http://localhost:3000/api/products")
     const data: Book[] = await res.json()
     return {
         props: {

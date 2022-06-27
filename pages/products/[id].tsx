@@ -14,7 +14,7 @@ interface Props {
 const Product: FC<Props> = ({book}) => {
     const router = useRouter()
     const handleBought = async()=>{
-        await fetch(`https://62b3a9264f851f87f45dfb80.mockapi.io/api/example/data/${book.id}`, { method: 'DELETE' })
+        await fetch(`http://localhost:3000/api/products/${book.id}`, { method: 'DELETE' })
         alert("Thanks for buying!")
         router.push("/products")
     }
@@ -26,7 +26,7 @@ const Product: FC<Props> = ({book}) => {
 
 
 export const getStaticProps: GetStaticProps =async ({params}) => {
-    const res = await fetch(`https://62b3a9264f851f87f45dfb80.mockapi.io/api/example/data/${params?.id}`)
+    const res = await fetch(`http://localhost:3000/api/products/${params?.id}`)
     const data: Book = await res.json()
     console.log(data);
     return {
@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps =async ({params}) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const res = await fetch(`https://62b3a9264f851f87f45dfb80.mockapi.io/api/example/data`)
+    const res = await fetch(`http://localhost:3000/api/products`)
     const data: Book[] = await res.json()
     const paths = data.map(book => {
         return {params: {id: book.id}}})
