@@ -8,6 +8,7 @@ const NavBar = () => {
       <div className='container-fluid'>
           <Image src="/logo.png" alt='logo' width={50} height={50}/>
         <Link href="/products"><a className='nav-link'>Home</a></Link>
+        <Link href="/create"><a className='nav-link'>Create</a></Link>
         <Link href="/products/offers"><a className='nav-link'>Sale</a></Link>
       </div>
     </nav>
