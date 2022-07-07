@@ -4,12 +4,12 @@ import React from 'react'
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light" >
-      <div className='container-fluid'>
+    <nav >
+      <div>
           <Image src="/logo.png" alt='logo' width={50} height={50}/>
-        <Link href="/products"><a className='nav-link'>Home</a></Link>
-        <Link href="/create"><a className='nav-link'>Create</a></Link>
-        <Link href="/products/offers"><a className='nav-link'>Sale</a></Link>
+        <Link href="/products"><a>Home</a></Link>
+        <Link href="/create"><a>Create</a></Link>
+        <Link href="/products/offers"><a>Sale</a></Link>
       </div>
     </nav>
   )
