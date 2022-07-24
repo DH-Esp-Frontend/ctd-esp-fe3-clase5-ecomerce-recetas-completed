@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-import React, { FC } from 'react'
+import React, { ChangeEvent, ChangeEventHandler, FC, FormEvent, useState } from 'react'
 import Book from '../../features/Book'
 
 type Book = {name: string, id: string, image: string}
@@ -56,3 +56,38 @@ export const getStaticPaths: GetStaticPaths = async () => {
     
 }
 export default Product
+
+function Form() {
+    const [values, setValues] = useState({
+        email: "",
+        password: "",
+      });
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) =>  {
+      const { name, value } = e.target;
+      setValues({ ...values, [name]: value})
+    }
+
+    const handleSubmit = ()=>{
+        //...
+    }
+    return (
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="email">Email</label>
+        <input
+          name="email"
+          type="email"
+          value={values.email}
+          onChange={handleChange}
+        />
+        <label htmlFor="password">Password</label>
+        <input
+        name="password"
+        type="password"
+        value={values.password}
+        onChange={handleChange}
+        />
+        <button type="submit">Sign Up</button>
+      </form>
+    );
+  }
